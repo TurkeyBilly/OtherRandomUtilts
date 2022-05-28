@@ -59,10 +59,10 @@ print(
 f"""
 对阵规则：单持方，租号为[a]的组将分别与组号为[a-1]，以及[a+1]的组对战
 例子：
-组3 ({groupNameList[2]}) (反) 将分别对阵
-    组2 ({groupNameList[1]}) (正)
+组3 ({groupNameList[2]}) (正) 将分别对阵
+    组2 ({groupNameList[1]}) (反)
     与
-    组4 ({groupNameList[3]}) (正)
+    组4 ({groupNameList[3]}) (反)
 """
 )
 
