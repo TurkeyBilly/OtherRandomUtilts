@@ -31,11 +31,11 @@ def simu(
         dead_t.append(dead)
 
         susceptible_delta = - infection_rate * susceptible * infected / population
-        infected_delta = - susceptible_delta - recover_porpotion * infected * safe_rate
+        infected_delta = - susceptible_delta - recover_porpotion * infected
         removed_delta = recover_porpotion * infected * safe_rate
         death_delta = recover_porpotion * infected * death_rate
 
-        susceptible_delta += growth_rate * population
+        susceptible_delta += growth_rate * population / 365
         infected_delta += re_infected_rate * removed * average_contacts
         removed_delta -= re_infected_rate * removed * average_contacts
 
@@ -57,11 +57,11 @@ T, S, I, R, D = simu(
     infected=1000,
     removed=0,
     recover_porpotion=1/14,
-    average_contacts=3.5,
+    average_contacts=1,
     growth_rate=0.0,
     death_rate=0.1,
     re_infected_rate=0.01,
-    simu_range=150
+    simu_range=200
 )
 
 plt.plot(T, S, label='Susceptible')
