@@ -1,3 +1,10 @@
+"""
+Inspired by CSC110 23Fall In-course Project.
+This file establish a framework for future 2d-console map games, providing wrapper classes such as
+Location, SequantialLocation, Item, Player, and World, etc.
+"""
+
+
 from __future__ import annotations
 
 from typing import Optional, TextIO
